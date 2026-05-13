@@ -2,41 +2,301 @@
  * Main stylesheet for Flatsome Child
  */
 
-// Import other SCSS files here
-// @import "components/header";
+// Brand Colors
+$primary-green: #00552b;
+$secondary-green: #70b340;
+$text-dark: #111827;
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #111827;
+  font-family: "Inter", sans-serif;
+  color: #111827;
 }
 
 .container {
-    width: 1280px;
-    max-width: 92%;
-    margin: auto;
+  width: 1280px;
+  max-width: 92%;
+  margin: auto;
 }
 
 // Logo Styling for Header
 .header-logo-text {
-    font-size: 32px;
-    font-weight: 800;
-    color: #00552b !important;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-transform: none;
-    text-decoration: none;
+  font-size: 32px;
+  font-weight: 800;
+  color: $primary-green !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  text-decoration: none;
 
-    &::after {
-        content: '';
-        display: inline-block;
-        width: 22px;
-        height: 30px;
-        background: #70b340;
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        border-radius: 50% 50% 50% 50% / 80% 20% 80% 20%;
-        box-shadow: -7px 4px 0 -1px #70b340;
-        transform: rotate(15deg);
-        opacity: 0.9;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 30px;
+    background: $secondary-green;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    border-radius: 50% 50% 50% 50% / 80% 20% 80% 20%;
+    box-shadow: -7px 4px 0 -1px $secondary-green;
+    transform: rotate(15deg);
+    opacity: 0.9;
+  }
+}
+
+/* Header Styles */
+
+#top-bar {
+  background-color: $primary-green !important;
+  color: #fff;
+
+  .nav > li > a,
+  .html {
+    color: #fff !important;
+    font-size: 12px;
+  }
+}
+
+.header-main {
+  background-color: #fff !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05) !important;
+  padding: 5px 0;
+
+  .logo img {
+    max-height: 65px !important;
+    width: auto !important;
+  }
+}
+
+/* Menu styling */
+.header-nav-main {
+  > li > a {
+    font-family: "Inter", sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    color: $text-dark !important;
+    text-transform: uppercase !important;
+    padding: 0 10px !important;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: $secondary-green !important;
     }
+  }
+
+  > li.active > a {
+    color: $secondary-green !important;
+  }
+}
+
+/* Icons & Cart */
+.header-nav {
+  .account-item,
+  .cart-item,
+  .header-search {
+    font-size: 13px;
+  }
+}
+
+.cart-icon strong {
+  background-color: $secondary-green !important;
+  color: #fff !important;
+}
+
+/* Quote Button / Button 1 */
+.header-button .button,
+.header-main .quote-btn {
+  background-color: $primary-green !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  border: none !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-green !important;
+    transform: translateY(-2px);
+  }
+}
+
+.nav-dropdown {
+  border-radius: 8px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .header-nav-main > li > a {
+    padding: 0 6px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Tối ưu Header khi để chế độ Full Width */
+.header-main .flex-row.container,
+#top-bar .flex-row.container {
+  max-width: 96% !important;
+}
+
+/* FOOTER STYLING */
+#footer {
+  background-color: #002d14 !important; 
+  color: #fff;
+}
+
+.footer-widgets {
+  background-color: #002d14 !important;
+  padding: 80px 0 20px !important;
+  
+  .row {
+      max-width: 100% !important;
+      width: 100% !important;
+  }
+  .widget_custom_html {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+    padding: 0 !important;
+  }
+  .widget-title, .is-divider {
+    display: none !important;
+  }
+}
+
+.footer-custom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .f-col {
+    .f-logo {
+      color: #fff !important;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 26px;
+        background: $secondary-green;
+        border-radius: 50% 50% 50% 50% / 80% 20% 80% 20%;
+        transform: rotate(15deg);
+      }
+    }
+
+    .f-title {
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: rgba(255,255,255, 0.7) !important;
+      line-height: 1.8;
+      font-size: 14.5px;
+    }
+
+    .f-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 15px;
+        padding: 0 !important;
+        border: none !important;
+
+        a {
+          color: rgba(255,255,255, 0.7) !important;
+          font-size: 14.5px;
+          transition: all 0.3s;
+          text-decoration: none;
+
+          &:hover {
+            color: $secondary-green !important;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    
+    .f-contact p {
+      margin-bottom: 12px;
+      strong {
+        color: #fff !important;
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Absolute Footer Optimization */
+.absolute-footer {
+  background-color: #002d14 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 25px 0 !important;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-secondary, .payment-icons, .footer-nav {
+    display: none !important;
+  }
+
+  .copyright-footer {
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255, 0.4) !important;
+    font-size: 13px;
+  }
+}
+
+
+/* Absolute Footer Optimization */
+.absolute-footer {
+  background-color: #002d14 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 25px 0 !important;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-secondary, .payment-icons, .footer-nav {
+    display: none !important;
+  }
+
+  .copyright-footer {
+    width: 100%;
+    text-align: center;
+    color: #64748b !important;
+    font-size: 13px;
+    opacity: 1;
+  }
 }
