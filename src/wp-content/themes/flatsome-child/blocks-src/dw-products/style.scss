@@ -1,0 +1,100 @@
+.wp-block-dw-products.dw-products-section {
+  .section-title {
+    text-align: center !important;
+    margin-bottom: 70px !important;
+
+    span {
+      color: #70b340 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 3px !important;
+      font-size: 14px !important;
+      font-weight: 700 !important;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 56px) !important;
+      margin-top: 14px !important;
+      font-weight: 800 !important;
+      color: #0a1a0a !important;
+    }
+
+    p {
+      color: #64748b !important;
+      margin-top: 18px !important;
+      line-height: 1.8 !important;
+      max-width: 800px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .product-card {
+    background: #fff !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .07) !important;
+    transition: .4s !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+
+    &:hover {
+      transform: translateY(-10px) !important;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .12) !important;
+    }
+
+    img {
+      height: 300px !important;
+      object-fit: cover !important;
+      width: 100% !important;
+    }
+
+    .product-content {
+      padding: 34px !important;
+      flex-grow: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+
+      h3 {
+        font-size: clamp(24px, 3vw, 34px) !important;
+        margin-bottom: 14px !important;
+        color: #111827 !important;
+        font-weight: 700 !important;
+      }
+
+      p {
+        color: #64748b !important;
+        line-height: 1.8 !important;
+        margin-bottom: 20px !important;
+        font-size: 15px !important;
+      }
+
+      a {
+        color: #00552b !important;
+        font-weight: 700 !important;
+        margin-top: auto !important;
+        text-decoration: none !important;
+        transition: .3s !important;
+
+        &:hover {
+          color: #70b340 !important;
+          padding-left: 5px !important;
+        }
+      }
+    }
+  }
+}

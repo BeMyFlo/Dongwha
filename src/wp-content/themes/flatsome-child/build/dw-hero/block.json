@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dw/hero",
+  "version": "0.1.0",
+  "title": "Dongwha Hero",
+  "category": "text",
+  "description": "Hero section for Dongwha homepage",
+  "attributes": {
+    "smallText": {
+      "type": "string",
+      "default": "SÀN GỖ – MDF – LAMINATE CAO CẤP"
+    },
+    "title": {
+      "type": "string",
+      "default": "Dongwha"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Giải pháp gỗ công nghiệp hoàn hảo cho mọi không gian"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop"
+    },
+    "features": {
+      "type": "array",
+      "default": [
+        {
+          "text": "✔ Chất lượng chuẩn Hàn Quốc"
+        },
+        {
+          "text": "✔ Mẫu mã đa dạng"
+        },
+        {
+          "text": "✔ Bền đẹp theo thời gian"
+        }
+      ]
+    },
+    "primaryBtnText": {
+      "type": "string",
+      "default": "KHÁM PHÁ SẢN PHẨM"
+    },
+    "primaryBtnLink": {
+      "type": "string",
+      "default": "#"
+    },
+    "secondaryBtnText": {
+      "type": "string",
+      "default": "TƯ VẤN NGAY"
+    },
+    "secondaryBtnLink": {
+      "type": "string",
+      "default": "#"
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "dw-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

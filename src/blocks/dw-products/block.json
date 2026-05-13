@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dw/products",
+  "version": "0.1.0",
+  "title": "Dongwha Products",
+  "category": "design",
+  "description": "Products section for Dongwha homepage",
+  "attributes": {
+    "smallText": {
+      "type": "string",
+      "default": "SẢN PHẨM NỔI BẬT"
+    },
+    "title": {
+      "type": "string",
+      "default": "Danh mục sản phẩm"
+    },
+    "description": {
+      "type": "string",
+      "default": "Dongwha chuyên sản xuất sàn gỗ, tấm MDF và phân phối laminate chất lượng cao."
+    },
+    "products": {
+      "type": "array",
+      "default": [
+        {
+          "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+          "title": "Sàn gỗ Dongwha",
+          "desc": "Sàn gỗ công nghiệp cao cấp chống trầy xước và thân thiện môi trường.",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+          "title": "Tấm MDF Dongwha",
+          "desc": "Tấm MDF chất lượng cao phù hợp cho nội thất hiện đại.",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+          "title": "Tấm Laminate",
+          "desc": "Laminate đa dạng màu sắc và bề mặt sang trọng.",
+          "link": "#"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "dw-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

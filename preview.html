@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dongwha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:#111827;
+      background:#fff;
+      overflow-x:hidden;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:1280px;
+      max-width:92%;
+      margin:auto;
+    }
+
+    /* TOP BAR */
+
+    .topbar{
+      background:#00552b;
+      color:#fff;
+      font-size:13px;
+      padding:10px 0;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#fff;
+      box-shadow:0 2px 20px rgba(0,0,0,.05);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 0;
+    }
+
+    .logo{
+      font-size:42px;
+      font-weight:800;
+      color:#00552b;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo::after{
+      content:'';
+      display:inline-block;
+      width:30px;
+      height:40px;
+      background:#70b340;
+      clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      border-radius:50% 50% 50% 50% / 80% 20% 80% 20%;
+      box-shadow: -10px 5px 0 -2px #70b340; /* Second leaf */
+      transform: rotate(15deg);
+      opacity: 0.9;
+    }
+
+    .nav-menu{
+      display:flex;
+      gap:36px;
+      align-items:center;
+    }
+
+    .nav-menu a{
+      color:#111827;
+      font-weight:600;
+      font-size:14px;
+      transition:.3s;
+    }
+
+    .nav-menu a:hover{
+      color:#70b340;
+    }
+
+    .header-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .info{
+      font-size:13px;
+      line-height:1.6;
+      color:#475569;
+    }
+
+    .quote-btn{
+      background:#00552b;
+      color:#fff;
+      padding:15px 24px;
+      border-radius:10px;
+      font-weight:700;
+      transition:.3s;
+    }
+    .quote-btn:hover{
+      background:#70b340;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:780px;
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      display:flex;
+      align-items:center;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero small{
+      text-transform:uppercase;
+      letter-spacing:4px;
+      color:#70b340;
+      font-weight:800;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .hero h1{
+      font-size:100px;
+      line-height:1;
+      color:#fff;
+      margin:10px 0 24px;
+      font-weight:900;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .hero h2{
+      font-size:58px;
+      line-height:1.25;
+      margin-bottom:40px;
+      font-weight:700;
+    }
+
+    .hero-features{
+      display:flex;
+      gap:40px;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+    }
+
+    .hero-features div{
+      font-size:16px;
+      color:#f8fafc;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+    }
+
+    .btn{
+      padding:17px 34px;
+      border-radius:12px;
+      font-weight:700;
+      display:inline-block;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:#70b340;
+      color:#fff;
+      border: 1px solid #70b340;
+    }
+    .btn-primary:hover{
+      background:#00552b;
+      border-color:#00552b;
+    }
+
+    .btn-outline{
+      border:1px solid #fff;
+      color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:110px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title span{
+      color:#70b340;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .section-title h2{
+      font-size:56px;
+      margin-top:14px;
+      font-weight:800;
+      color:#0a1a0a;
+    }
+
+    .section-title p{
+      color:#64748b;
+      margin-top:18px;
+      line-height:1.8;
+    }
+
+    /* PRODUCT */
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    .product-card{
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 8px 30px rgba(0,0,0,.07);
+      transition:.4s;
+    }
+
+    .product-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .product-card img{
+      height:300px;
+      object-fit:cover;
+    }
+
+    .product-content{
+      padding:34px;
+    }
+
+    .product-content h3{
+      font-size:34px;
+      margin-bottom:14px;
+      color:#111827;
+    }
+
+    .product-content p{
+      color:#64748b;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    .product-content a{
+      color:#00552b;
+      font-weight:700;
+    }
+    .product-content a:hover{
+      color:#70b340;
+    }
+
+    /* BLUE FEATURES */
+
+    .blue-section{
+      background:#00552b;
+      color:#fff;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:40px;
+      text-align:center;
+    }
+
+    .feature-box h4{
+      font-size:22px;
+      margin:18px 0 10px;
+    }
+
+    .feature-box p{
+      color:#f0f9eb;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-grid img{
+      border-radius:24px;
+    }
+
+    .about-text span{
+      color:#70b340;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:3px;
+    }
+
+    .about-text h2{
+      font-size:58px;
+      line-height:1.2;
+      margin:18px 0 24px;
+    }
+
+    .about-text p{
+      color:#64748b;
+      line-height:1.9;
+      margin-bottom:28px;
+    }
+
+    .about-list{
+      list-style:none;
+      padding:0;
+    }
+
+    .about-list li{
+      margin-bottom:14px;
+      color:#334155;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    /* PROJECTS */
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+    }
+
+    .project-card img{
+      height:230px;
+      object-fit:cover;
+      border-radius:18px;
+      margin-bottom:16px;
+    }
+
+    .project-card h4{
+      font-size:22px;
+      margin-bottom:8px;
+    }
+
+    .project-card p{
+      color:#64748b;
+    }
+
+    .center-btn{
+      text-align:center;
+      margin-top:50px;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:
+      linear-gradient(rgba(0,45,20,.9),rgba(0,45,20,.9)),
+      url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+    }
+
+    .cta-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:40px;
+    }
+
+    .cta h2{
+      font-size:56px;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      color:#f0f9eb;
+      line-height:1.8;
+      max-width:650px;
+    }
+
+    .cta-boxes{
+      display:flex;
+      gap:20px;
+    }
+
+    .cta-box{
+      background:rgba(255,255,255,.1);
+      padding:26px;
+      border-radius:18px;
+      min-width:240px;
+      backdrop-filter:blur(10px);
+    }
+
+    .cta-box h4{
+      margin-top:10px;
+      font-size:28px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#002d14;
+      color:#cbd5e1;
+      padding-top:80px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:60px;
+    }
+
+    footer h3{
+      color:#00552b;
+      margin-bottom:24px;
+      font-size:32px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    footer h3::after{
+       content:'';
+      display:inline-block;
+      width:20px;
+      height:28px;
+      background:#70b340;
+      border-radius:50% 50% 50% 50% / 80% 20% 80% 20%;
+      transform: rotate(15deg);
+    }
+
+    footer h4{
+      color:#fff;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+
+    footer p,
+    footer li{
+      color:#94a3b8;
+      line-height:1.9;
+      margin-bottom:10px;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.08);
+      text-align:center;
+      padding:24px 0;
+      color:#94a3b8;
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1024px){
+
+      .product-grid,
+      .feature-grid,
+      .project-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .about-grid,
+      .cta-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+        display:grid;
+      }
+
+      .hero h1{
+        font-size:72px;
+      }
+
+      .hero h2{
+        font-size:44px;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .nav-menu,
+      .header-right{
+        display:none;
+      }
+
+      .hero{
+        height:auto;
+        padding:120px 0;
+      }
+
+      .hero h1{
+        font-size:56px;
+      }
+
+      .hero h2{
+        font-size:34px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+      }
+
+      .product-grid,
+      .feature-grid,
+      .project-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-title h2,
+      .about-text h2,
+      .cta h2{
+        font-size:38px;
+      }
+
+      .cta-boxes{
+        flex-direction:column;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+    <div class="container">
+      Dongwha — Giải pháp gỗ công nghiệp cao cấp cho không gian sống hiện đại
+    </div>
+  </div>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">Dongwha</div>
+
+      <nav class="nav-menu">
+        <a href="#">TRANG CHỦ</a>
+        <a href="#">SẢN PHẨM</a>
+        <a href="#">BỘ SƯU TẬP</a>
+        <a href="#">GIỚI THIỆU</a>
+        <a href="#">TIN TỨC</a>
+        <a href="#">LIÊN HỆ</a>
+      </nav>
+
+      <div class="header-right">
+
+        <div class="info">
+          Tư vấn & báo giá<br>
+          <strong>0901 234 567</strong>
+        </div>
+
+        <a href="#" class="quote-btn">BÁO GIÁ NHANH</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <small>SÀN GỖ – MDF – LAMINATE CAO CẤP</small>
+
+        <h1>Dongwha</h1>
+
+        <h2>
+          Giải pháp gỗ công nghiệp hoàn hảo cho mọi không gian
+        </h2>
+
+        <div class="hero-features">
+
+          <div>✔ Chất lượng chuẩn Hàn Quốc</div>
+          <div>✔ Mẫu mã đa dạng</div>
+          <div>✔ Bền đẹp theo thời gian</div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn btn-primary">
+            KHÁM PHÁ SẢN PHẨM
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            TƯ VẤN NGAY
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>SẢN PHẨM NỔI BẬT</span>
+
+        <h2>Danh mục sản phẩm</h2>
+
+        <p>
+          Dongwha chuyên sản xuất sàn gỗ, tấm MDF và phân phối laminate chất lượng cao.
+        </p>
+
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="product-content">
+
+            <h3>Sàn gỗ Dongwha</h3>
+
+            <p>
+              Sàn gỗ công nghiệp cao cấp chống trầy xước và thân thiện môi trường.
+            </p>
+
+            <a href="#">Xem chi tiết →</a>
+
+          </div>
+
+        </div>
+
+        <div class="product-card">
+
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="product-content">
+
+            <h3>Tấm MDF Dongwha</h3>
+
+            <p>
+              Tấm MDF chất lượng cao phù hợp cho nội thất hiện đại.
+            </p>
+
+            <a href="#">Xem chi tiết →</a>
+
+          </div>
+
+        </div>
+
+        <div class="product-card">
+
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="product-content">
+
+            <h3>Tấm Laminate</h3>
+
+            <p>
+              Laminate đa dạng màu sắc và bề mặt sang trọng.
+            </p>
+
+            <a href="#">Xem chi tiết →</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="blue-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span style="color:#f0f9eb">VÌ SAO CHỌN DONGWHA?</span>
+
+        <h2 style="color:white">
+          Cam kết chất lượng – Dịch vụ tận tâm
+        </h2>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-box">
+          <h4>Sản phẩm chính hãng</h4>
+          <p>Đảm bảo nguồn gốc rõ ràng và chất lượng đạt chuẩn.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Công nghệ hiện đại</h4>
+          <p>Dây chuyền sản xuất tiên tiến theo tiêu chuẩn quốc tế.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Thân thiện môi trường</h4>
+          <p>Nguyên liệu an toàn hướng đến phát triển bền vững.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Mẫu mã đa dạng</h4>
+          <p>Đáp ứng nhiều phong cách nội thất hiện đại.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Hỗ trợ tận tâm</h4>
+          <p>Tư vấn chuyên nghiệp và giao hàng nhanh chóng.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <div class="container about-grid">
+
+      <div class="about-text">
+
+        <span>VỀ CHÚNG TÔI</span>
+
+        <h2>Dongwha – Thương hiệu gỗ công nghiệp hàng đầu</h2>
+
+        <p>
+          Với nhiều năm kinh nghiệm trong lĩnh vực sản xuất và phân phối vật liệu gỗ công nghiệp,
+          Dongwha cam kết mang đến sản phẩm chất lượng cao.
+        </p>
+
+        <ul class="about-list">
+          <li>✔ Nhà máy đạt tiêu chuẩn quốc tế</li>
+          <li>✔ Kiểm định chất lượng nghiêm ngặt</li>
+          <li>✔ Có mặt tại nhiều showroom toàn quốc</li>
+        </ul>
+
+        <a href="#" class="btn btn-primary">
+          TÌM HIỂU THÊM
+        </a>
+
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECT -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>DỰ ÁN TIÊU BIỂU</span>
+
+        <h2>Ứng dụng thực tế</h2>
+
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+          <h4>Căn hộ hiện đại</h4>
+          <p>Sàn gỗ Dongwha</p>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+          <h4>Nhà phố</h4>
+          <p>Tấm MDF Dongwha</p>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+          <h4>Văn phòng</h4>
+          <p>Laminate</p>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
+          <h4>Khách sạn – Resort</h4>
+          <p>Sàn gỗ Dongwha</p>
+        </div>
+
+      </div>
+
+      <div class="center-btn">
+
+        <a href="#" class="btn btn-outline" style="border-color:#00552b;color:#00552b;">
+          XEM THÊM DỰ ÁN
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container cta-wrap">
+
+      <div>
+
+        <h2>Bạn cần tư vấn sản phẩm phù hợp?</h2>
+
+        <p>
+          Đội ngũ chuyên viên của Dongwha luôn sẵn sàng hỗ trợ để mang đến giải pháp tối ưu.
+        </p>
+
+      </div>
+
+      <div class="cta-boxes">
+
+        <div class="cta-box">
+          <p>Gọi ngay cho chúng tôi</p>
+          <h4>0901 234 567</h4>
+        </div>
+
+        <div class="cta-box">
+          <p>Chat trực tuyến</p>
+          <h4>Nhận tư vấn ngay</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <h3>Dongwha</h3>
+
+        <p>
+          Chuyên sản xuất sàn gỗ Dongwha, MDF Dongwha và phân phối laminate chất lượng cao.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>SẢN PHẨM</h4>
+
+        <ul>
+          <li>Sàn gỗ Dongwha</li>
+          <li>Tấm MDF Dongwha</li>
+          <li>Tấm Laminate</li>
+          <li>Phụ kiện</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>THÔNG TIN</h4>
+
+        <ul>
+          <li>Giới thiệu</li>
+          <li>Bộ sưu tập</li>
+          <li>Tin tức</li>
+          <li>Liên hệ</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>LIÊN HỆ</h4>
+
+        <ul>
+          <li>123 Đường ABC, TP.HCM</li>
+          <li>0901 234 567</li>
+          <li>info@dongwha.vn</li>
+          <li>www.dongwha.vn</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Dongwha. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>

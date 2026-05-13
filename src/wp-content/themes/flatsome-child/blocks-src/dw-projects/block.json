@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dw/projects",
+  "version": "0.1.0",
+  "title": "Dongwha Projects",
+  "category": "text",
+  "description": "Projects grid for Dongwha homepage",
+  "attributes": {
+    "smallText": {
+      "type": "string",
+      "default": "DỰ ÁN TIÊU BIỂU"
+    },
+    "title": {
+      "type": "string",
+      "default": "Công trình sử dụng sản phẩm Dongwha"
+    },
+    "projects": {
+      "type": "array",
+      "default": [
+        { "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop", "title": "Văn phòng cao cấp" },
+        { "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop", "title": "Biệt thự hiện đại" },
+        { "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop", "title": "Căn hộ cao cấp" },
+        { "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop", "title": "Khách sạn 5 sao" }
+      ]
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 110
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 110
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "textdomain": "dw-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

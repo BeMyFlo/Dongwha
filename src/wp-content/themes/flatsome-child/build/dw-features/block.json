@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dw/features",
+  "version": "0.1.0",
+  "title": "Dongwha Features",
+  "category": "text",
+  "description": "Features section (Blue/Green background) for Dongwha homepage",
+  "attributes": {
+    "smallText": {
+      "type": "string",
+      "default": "VÌ SAO CHỌN DONGWHA?"
+    },
+    "title": {
+      "type": "string",
+      "default": "Cam kết chất lượng – Dịch vụ tận tâm"
+    },
+    "features": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Sản phẩm chính hãng",
+          "desc": "Đảm bảo nguồn gốc rõ ràng và chất lượng đạt chuẩn."
+        },
+        {
+          "title": "Công nghệ hiện đại",
+          "desc": "Dây chuyền sản xuất tiên tiến theo tiêu chuẩn quốc tế."
+        },
+        {
+          "title": "Thân thiện môi trường",
+          "desc": "Nguyên liệu an toàn hướng đến phát triển bền vững."
+        },
+        {
+          "title": "Mẫu mã đa dạng",
+          "desc": "Đáp ứng nhiều phong cách nội thất hiện đại."
+        },
+        {
+          "title": "Hỗ trợ tận tâm",
+          "desc": "Tư vấn chuyên nghiệp và giao hàng nhanh chóng."
+        }
+      ]
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 110
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 110
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "dw-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

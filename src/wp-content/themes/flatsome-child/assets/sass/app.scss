@@ -1,0 +1,42 @@
+/**
+ * Main stylesheet for Flatsome Child
+ */
+
+// Import other SCSS files here
+// @import "components/header";
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+}
+
+.container {
+    width: 1280px;
+    max-width: 92%;
+    margin: auto;
+}
+
+// Logo Styling for Header
+.header-logo-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: #00552b !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    text-decoration: none;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 30px;
+        background: #70b340;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        border-radius: 50% 50% 50% 50% / 80% 20% 80% 20%;
+        box-shadow: -7px 4px 0 -1px #70b340;
+        transform: rotate(15deg);
+        opacity: 0.9;
+    }
+}

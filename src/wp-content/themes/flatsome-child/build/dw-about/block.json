@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dw/about",
+  "version": "0.1.0",
+  "title": "Dongwha About",
+  "category": "text",
+  "description": "About section with 2-column layout for Dongwha homepage",
+  "attributes": {
+    "smallText": {
+      "type": "string",
+      "default": "VỀ CHÚNG TÔI"
+    },
+    "title": {
+      "type": "string",
+      "default": "Dongwha – Thương hiệu gỗ công nghiệp hàng đầu"
+    },
+    "description": {
+      "type": "string",
+      "default": "Với hơn 70 năm kinh nghiệm, Dongwha cam kết mang đến những sản phẩm chất lượng vượt trội, an toàn cho người sử dụng và thân thiện với môi trường."
+    },
+    "image": {
+      "type": "string",
+      "default": "https://images.unsplash.com/photo-1536532184021-ba5e1f6d1b24?q=80&w=1200&auto=format&fit=crop"
+    },
+    "listItems": {
+      "type": "array",
+      "default": [
+        {
+          "text": "Hơn 70 năm kinh nghiệm toàn cầu"
+        },
+        {
+          "text": "Công nghệ hiện đại chuẩn Hàn Quốc"
+        },
+        {
+          "text": "Hệ thống phân phối rộng khắp"
+        }
+      ]
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 110
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 110
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "dw-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

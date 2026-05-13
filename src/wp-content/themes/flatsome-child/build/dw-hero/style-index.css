@@ -1,0 +1,103 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/wp-content/themes/flatsome-child/blocks-src/dw-hero/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-dw-hero.hero {
+  height: clamp(600px, 80vh, 780px) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.wp-block-dw-hero.hero .container {
+  width: 1280px !important;
+  max-width: 92% !important;
+  margin: auto !important;
+}
+.wp-block-dw-hero.hero .hero-content {
+  max-width: 700px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+.wp-block-dw-hero.hero small {
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  color: #70b340 !important;
+  font-weight: 800 !important;
+  display: block !important;
+  margin-bottom: 10px !important;
+  font-size: clamp(12px, 2vw, 14px) !important;
+}
+.wp-block-dw-hero.hero h1 {
+  font-size: clamp(56px, 8vw, 100px) !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  margin: 10px 0 24px !important;
+  font-weight: 900 !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+.wp-block-dw-hero.hero h2 {
+  font-size: clamp(28px, 4vw, 58px) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 40px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+.wp-block-dw-hero.hero .hero-features {
+  display: flex !important;
+  gap: 40px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 40px !important;
+}
+.wp-block-dw-hero.hero .hero-features div {
+  font-size: 16px !important;
+  color: #f8fafc !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.wp-block-dw-hero.hero .hero-buttons {
+  display: flex !important;
+  gap: 18px !important;
+}
+@media (max-width: 768px) {
+  .wp-block-dw-hero.hero .hero-buttons {
+    flex-direction: column !important;
+  }
+}
+.wp-block-dw-hero.hero .btn {
+  padding: 17px 34px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  display: inline-block !important;
+  transition: 0.3s !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.wp-block-dw-hero.hero .btn:hover {
+  transform: translateY(-3px) !important;
+}
+.wp-block-dw-hero.hero .btn.btn-primary {
+  background: #70b340 !important;
+  color: #fff !important;
+  border: 1px solid #70b340 !important;
+}
+.wp-block-dw-hero.hero .btn.btn-primary:hover {
+  background: #00552b !important;
+  border-color: #00552b !important;
+}
+.wp-block-dw-hero.hero .btn.btn-outline {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+.wp-block-dw-hero.hero .btn.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.is-selected .hero {
+  outline: 2px solid #70b340;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

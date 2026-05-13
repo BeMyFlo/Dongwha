@@ -1,0 +1,112 @@
+.hero {
+  height: clamp(600px, 80vh, 780px);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    width: 1280px;
+    max-width: 92%;
+    margin: auto;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+
+  small {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #70b340;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+    font-size: clamp(12px, 2vw, 14px);
+  }
+
+  h1 {
+    font-size: clamp(56px, 8vw, 100px);
+    line-height: 1;
+    color: #fff;
+    margin: 10px 0 24px;
+    font-weight: 900;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: clamp(28px, 4vw, 58px);
+    line-height: 1.25;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  .hero-features {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    div {
+      font-size: 16px;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 18px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .btn {
+    padding: 17px 34px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-block;
+    transition: .3s;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &.btn-primary {
+      background: #70b340;
+      color: #fff;
+      border: 1px solid #70b340;
+
+      &:hover {
+        background: #00552b;
+        border-color: #00552b;
+      }
+    }
+
+    &.btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+// Editor specific adjustments
+.is-selected .hero {
+  outline: 2px solid #70b340;
+}

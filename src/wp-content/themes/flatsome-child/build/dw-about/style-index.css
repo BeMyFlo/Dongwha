@@ -1,0 +1,65 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/wp-content/themes/flatsome-child/blocks-src/dw-about/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-dw-about.about-section .about-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: clamp(40px, 6vw, 100px) !important;
+  align-items: center !important;
+}
+@media (max-width: 991px) {
+  .wp-block-dw-about.about-section .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+.wp-block-dw-about.about-section .about-small {
+  color: #70b340 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  display: block !important;
+  margin-bottom: 14px !important;
+}
+.wp-block-dw-about.about-section h2 {
+  font-size: clamp(32px, 4vw, 48px) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: #0a1a0a !important;
+  margin-bottom: 20px !important;
+}
+.wp-block-dw-about.about-section p {
+  color: #64748b !important;
+  margin-top: 24px !important;
+  line-height: 1.8 !important;
+  font-size: 16px !important;
+}
+.wp-block-dw-about.about-section .about-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin-top: 30px !important;
+}
+.wp-block-dw-about.about-section .about-list li {
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  font-size: 15px !important;
+}
+.wp-block-dw-about.about-section .about-list .check-icon {
+  color: #70b340 !important;
+  font-weight: bold !important;
+}
+.wp-block-dw-about.about-section .about-image img {
+  width: 100% !important;
+  border-radius: 40px !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1) !important;
+  transition: 0.5s !important;
+}
+.wp-block-dw-about.about-section .about-image img:hover {
+  transform: translateY(-10px) !important;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
